@@ -336,17 +336,7 @@
         <div class="container mt-5 mb-4 text-center text-md-left">
             <div class="row">
 
-                <!--First column-->
-                <div class="col-md-3 col-lg-4 col-xl-3 mb-r">
-                    <h6 class="title font-bold">
-                        <strong>Hunting and Fishing Mexican Expeditions, LLC.</strong>
-                    </h6>
-                    <hr class="blue mb-4 pb-1 mt-0 d-inline-block mx-auto" style="width: 60px;">
-                    <!-- <p>Here you can use rows and columns here to organize your footer content. Lorem ipsum dolor sit amet, consectetur
-                        adipisicing elit.</p> -->
-                </div>
-                <!--/.First column-->
-
+                
                 <!--Second column-->
                 <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-r">
                     <h6 class="title font-bold">
@@ -400,6 +390,8 @@
                 </div>
                 <!--/.Fourth column-->
 
+                <div id="map"></div>
+
             </div>
         </div>
         <!--/.Footer Links-->
@@ -435,4 +427,21 @@
     <script>
         new WOW().init();
     </script>
+
+<script>
+    function initMap() {
+      var uluru = {lat: 32.622863, lng: -115.452008};
+      var map = new google.maps.Map(document.getElementById('map'), {
+        zoom: 4,
+        center: uluru
+      });
+      var marker = new google.maps.Marker({
+        position: uluru,
+        map: map
+      });
+    }
+  </script>
+  <script async defer
+  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCkZgAk_jVfUW631M3HY7QWKZ4b36nRvmo&callback=initMap">
+  </script>
 </html>
